@@ -1,0 +1,49 @@
+/* 棒グラフ */
+.body1 .bar:hover {
+  fill: brown;
+}
+.body1 .tooltip {
+  position: absolute;
+  text-align: center;
+  width: auto;
+  height: auto;
+  padding: 5px;
+  font: 12px;
+  background: white;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+}
+
+/* cluster */
+.body6 .link {
+  fill: none;
+  stroke: #555;
+  stroke-opacity: .4;
+  stroke-width: 1.5px;
+}
+
+/* tree */
+.body8 .link {
+  fill: none;
+  stroke: #555;
+  stroke-opacity: .4;
+  stroke-width: 1.5px;
+}
+
+.body9 .node {
+  cursor: pointer;
+}
+.body9 .node .circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+.body9 .link {
+  fill: none;
+  stroke: #555;
+  stroke-opacity: .6;
+  stroke-width: 1.5px;
+}
+
+
+/* ★★★ */

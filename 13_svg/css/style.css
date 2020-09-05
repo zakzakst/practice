@@ -1,0 +1,203 @@
+/* レイアウト */
+section {
+  position: relative;
+}
+.spacer {
+  height: 300px;
+}
+svg {
+  vertical-align: bottom;
+  z-index: 1;
+}
+.container {
+  z-index: 2;
+}
+
+/* svg1 （高さ：固定 ／ 幅：成行 ／ 下境目：中央） */
+.svg1 {
+  background: #eee;
+}
+.svg1 svg {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100px;
+  transform: translateY(-50%);
+}
+.svg1 .base {
+  fill: #fff;
+}
+.svg1 .item1 {
+  fill: #ccc;
+}
+.svg1 .item2 {
+  fill: #ddd;
+}
+.svg1 .item3 {
+  fill: #eee;
+}
+
+/* svg2 （高さ：成行 ／ 幅：成行 ／ 下境目：上） */
+.svg2 svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.svg2 .base {
+  fill: #eee;
+}
+.svg2 .item1 {
+  fill: #ccc;
+}
+.svg2 .item2 {
+  fill: #ddd;
+}
+.svg2 .item3 {
+  fill: #fff;
+}
+
+/* svg3 （高さ：成行 ／ 幅：成行、最低幅あり ／ 下境目：下） */
+.svg3 {
+  background: #eee;
+}
+.svg3 svg {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+@media screen and (min-width: 600px) {
+  .svg3 svg {
+    min-width: 890px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.svg3 .item1 {
+  fill: #eee;
+}
+
+/* svg4 （高さ：成行 ／ 幅：成行 ／ 上境目：中央 ／ 下境目：中央） */
+.svg4 {
+  background: #eee;
+}
+.svg4 .item-top {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transform: translateY(-50%);
+}
+.svg4 .item-top .base {
+  fill: #fff;
+}
+.svg4 .item-top .item1 {
+  fill: #eee;
+}
+.svg4 .item-top .item2 {
+  fill: #ccc;
+}
+.svg4 .item-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(50%);
+}
+.svg4 .item-bottom .base {
+  fill: #fff;
+}
+.svg4 .item-bottom .item1 {
+  fill: #eee;
+}
+.svg4 .item-bottom .item2 {
+  fill: #ccc;
+}
+.svg4 .item-bottom .item3 {
+  fill: #ddd;
+}
+
+/* svg5 （高さ：成行 ／ 幅：成行 ／ 上境目：中央 ／ 下境目：中央） */
+.svg5 {
+  background: #eee;
+}
+.svg5 .item-top {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transform: translateY(-50%);
+}
+.svg5 .item-top .item1 {
+  fill: #ccc;
+}
+.svg5 .item-top .item2 {
+  fill: #eee;
+}
+.svg5 .item-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(50%);
+}
+.svg5 .item-bottom .item1 {
+  fill: #ccc;
+}
+.svg5 .item-bottom .item2 {
+  fill: #eee;
+}
+
+/* svg6 */
+.svg6 svg {
+  width: 100%;
+}
+
+/* svg7 */
+.svg7 {
+  background: url(https://picsum.photos/id/237/300/200);
+  /* background-size: cover; */
+}
+.mask7__text {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/* svg8 */
+.svg8 {
+  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+  padding-top: 100px;
+}
+.svg8 svg {
+  width: 100%;
+  height: 60px;
+}
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% {
+    transform: translate3d(85px,0,0);
+  }
+}
+
+/* メモ */
+.memo {
+  text-align: center;
+  font-size: 24px;
+  padding: 24px;
+}

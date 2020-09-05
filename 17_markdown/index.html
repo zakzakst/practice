@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/mermaid/dist/mermaid.min.css">
+  <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true
+    });
+  </script>
+</head>
+<body>
+ <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+  <div class="mermaid">
+    sequenceDiagram
+      ユーザ    ->> +Vue         : ログインボタンクリック
+      Vue      ->> +Laravel     : ログインAPI
+      Laravel  ->> +Database    : SQL
+        Note right of Database  : 認証テーブル参照
+      Database ->> -Laravel     : Result
+      alt ログイン成功
+        Laravel ->> Vue         : success
+      else 失敗
+        Laravel ->> -Vue        : failure
+      end
+      Vue       ->> -ユーザ      : 結果表示
+  </div>
+  <div class="mermaid">
+    graph TB
+      Macの選び方 --> 持ち歩く
+      持ち歩く -->|はい| スペック
+      持ち歩く -->|いいえ| 予算
+      スペック -->|必要| R1[MacBook Pro]
+      スペック -->|低くても良い| R2[MacBook Air]
+      予算 --> |いくらでもある| R3[Mac Pro]
+      予算 --> |できれば抑えたい| R4[Mac mini / iMac]
+  </div>
+</body>
+</html>
