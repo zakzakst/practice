@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>MVC練習 - インターセクション オブザーバー</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- ▼▼▼ ヘッダー ▼▼▼ -->
+    <nav class="navbar my-header" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+          <!-- ロゴ画像 -->
+          <a class="navbar-item" href="https://bulma.io">
+            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+          </a>
+          <!-- ハンバーガーメニュー（スマホ時のみ） -->
+          <a role="button" class="my-header__icon navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <!-- メニュー -->
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item">Home</a>
+            <a class="navbar-item">Documentation</a>
+            <!-- ドロップダウンメニュー -->
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">More</a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item">About</a>
+                <a class="navbar-item">Jobs</a>
+                <a class="navbar-item">Contact</a>
+                <hr class="navbar-divider">
+                <a class="navbar-item">Report an issue</a>
+              </div>
+            </div>
+          </div>
+          <!-- 右側に配置されるメニュー -->
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-primary"><strong>Sign up</strong></a>
+                <a class="button is-light">Log in</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- ▲▲▲ ヘッダー ▲▲▲ -->
+
+    <!-- ▼▼▼ コンテンツ ▼▼▼ -->
+    <section class="hero is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">Primary title</h1>
+          <h2 class="subtitle">Primary subtitle</h2>
+        </div>
+      </div>
+    </section>
+    <div class="container my-content__container">
+      <div class="columns">
+        <!-- メインコンテンツ -->
+        <main class="column is-three-quarters">
+          <div class="my-content content">
+            <section class="my-section section" data-target="menu-1">
+              <h2>Heading 01</h2>
+              <p>Each of your (micro)services with multiple integrations can be scoped through issues and monitored individually.</p>
+              <p>Group and receive incidents from integration. Every service can have multiple integrations.</p>
+              <p>We always alert the right person for the right incident. Add your team to a highly customisable escalation policy and cut out noise.</p>
+            </section>
+            <section class="my-section section" data-target="menu-2">
+              <h2>Heading 02</h2>
+              <p>Each of your (micro)services with multiple integrations can be scoped through issues and monitored individually.</p>
+              <p>Group and receive incidents from integration. Every service can have multiple integrations.</p>
+              <p>We always alert the right person for the right incident. Add your team to a highly customisable escalation policy and cut out noise.</p>
+            </section>
+            <section class="my-section section" data-target="menu-3">
+              <h2>Heading 03</h2>
+              <div class="box has-background-light">
+                <p>Each of your (micro)services with multiple integrations can be scoped through issues and monitored individually.</p>
+                <p>Group and receive incidents from integration. Every service can have multiple integrations.</p>
+                <p>We always alert the right person for the right incident. Add your team to a highly customisable escalation policy and cut out noise.</p>
+              </div>
+            </section>
+            <section class="my-section section" data-target="menu-4">
+              <h2>Heading 04</h2>
+              <table class="table is-striped">
+                <thead>
+                  <tr>
+                    <th>NAME</th>
+                    <th>ITEM 1</th>
+                    <th>ITEM 2</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th>TOTAL</th>
+                    <th>33</th>
+                    <th>60</th>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  <tr>
+                    <th>Name 1</th>
+                    <td>10</td>
+                    <td>21</td>
+                  </tr>
+                  <tr>
+                    <th>Name 2</th>
+                    <td>4</td>
+                    <td>30</td>
+                  </tr>
+                  <tr>
+                    <th>Name 3</th>
+                    <td>19</td>
+                    <td>9</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+            <section class="my-section section" data-target="menu-5">
+              <h2>Heading 05</h2>
+              <div class="columns">
+                <div class="column">
+                  <div class="card">
+                    <div class="card-image">
+                      <p class="image is-2by1">
+                        <img src="https://bulma.io/images/placeholders/640x320.png" alt="Placeholder image">
+                      </p>
+                    </div>
+                    <div class="card-content">
+                      <p class="title is-4">Title</p>
+                      <p class="subtitle is-6">subtitle</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="card">
+                    <div class="card-image">
+                      <p class="image is-2by1">
+                        <img src="https://bulma.io/images/placeholders/640x320.png" alt="Placeholder image">
+                      </p>
+                    </div>
+                    <div class="card-content">
+                      <p class="title is-4">Title</p>
+                      <p class="subtitle is-6">subtitle</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="my-section section" data-target="menu-6">
+              <h2>Heading 06</h2>
+              <p>Each of your (micro)services with multiple integrations can be scoped through issues and monitored individually.</p>
+              <p>Group and receive incidents from integration. Every service can have multiple integrations.</p>
+              <p>We always alert the right person for the right incident. Add your team to a highly customisable escalation policy and cut out noise.</p>
+              <div class="my-buttons buttons is-centered">
+                <button class="button is-medium is-rounded is-primary">Rounded</button>
+                <button class="button is-medium is-rounded">Rounded</button>
+              </div>
+            </section>
+          </div>
+        </main>
+        <!-- サイドメニュー -->
+        <div class="column is-one-quarter is-hidden-mobile">
+          <aside class="my-menu menu">
+            <p class="menu-label">Menu Label 01</p>
+            <ul class="menu-list">
+              <li><a class="my-menu__item" id="menu-1">Heading 01</a></li>
+              <li><a class="my-menu__item" id="menu-2">Heading 02</a></li>
+              <li><a class="my-menu__item" id="menu-3">Heading 03</a></li>
+              <li><a class="my-menu__item" id="menu-4">Heading 04</a></li>
+              <li><a class="my-menu__item" id="menu-5">Heading 05</a></li>
+              <li><a class="my-menu__item" id="menu-6">Heading 06</a></li>
+            </ul>
+            <p class="menu-label">Menu Label 02</p>
+            <ul class="menu-list">
+              <li><a>menu 2-1</a></li>
+              <li>
+                <a>menu 2-2</a>
+                <ul>
+                  <li><a>submenu 2-2-1</a></li>
+                  <li><a>submenu 2-2-2</a></li>
+                  <li><a>submenu 2-2-3</a></li>
+                </ul>
+              </li>
+              <li><a>menu 2-3</a></li>
+            </ul>
+            <p class="menu-label">Menu Label 03</p>
+            <ul class="menu-list">
+              <li><a>menu 3-1</a></li>
+              <li><a>menu 3-2</a></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </div>
+    <!-- ▲▲▲ コンテンツ ▲▲▲ -->
+
+    <!-- ▼▼▼ フッター ▼▼▼ -->
+    <footer class="my-footer footer">
+      <div class="container content">
+        <div class="columns is-multiline">
+          <div class="column is-half-tablet is-one-quarter-desktop">
+            <p class="has-text-primary">Heading01</p>
+            <ul>
+              <li>content1</li>
+              <li>content2</li>
+              <li>content3</li>
+              <li>content4</li>
+              <li>content5</li>
+            </ul>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop">
+            <p class="has-text-primary">Heading02</p>
+            <ul>
+              <li>content1</li>
+              <li>content2</li>
+              <li>content3</li>
+              <li>content4</li>
+              <li>content5</li>
+            </ul>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop">
+            <p class="has-text-primary">Heading03</p>
+            <ul>
+              <li>content1</li>
+              <li>content2</li>
+              <li>content3</li>
+              <li>content4</li>
+              <li>content5</li>
+            </ul>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop">
+            <p class="has-text-primary">Heading04</p>
+            <ul>
+              <li>content1</li>
+              <li>content2</li>
+              <li>content3</li>
+              <li>content4</li>
+              <li>content5</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ▲▲▲ フッター ▲▲▲ -->
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

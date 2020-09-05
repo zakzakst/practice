@@ -1,0 +1,59 @@
+body {
+  position: relative;
+}
+
+/* ナビゲーション */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid transparent;
+  transition: all 1s;
+  z-index: 10;
+}
+.navbar.is-clearly {
+  background-color: rgba(255, 255, 255, 1);
+  border-bottom-color: #dee2e6;
+}
+
+/* ヒーローエリア */
+.hero-body {
+  padding-top: 6rem;
+}
+
+/* メインコンテンツ */
+.my-content__container {
+  padding: 3em 0;
+}
+
+.my-content {
+  padding-left: .75em;
+  padding-right: .75em;
+}
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  .my-content {
+    padding-right: 0;
+  }
+  .menu {
+    padding-right: .75em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .my-content {
+    padding-left: 0;
+  }
+}
+
+.section:first-child {
+  padding-top: 0;
+}
+
+.my-buttons {
+  padding-top: 1.5em;
+}
+
+.my-menu {
+  position: sticky;
+}
