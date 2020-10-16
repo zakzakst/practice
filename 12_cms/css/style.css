@@ -1,0 +1,79 @@
+/* 変数の設定 */
+:root {
+  --primary-color: #;
+  --main-bg-color: #222;
+  --main-bg-subcolor: #333;
+  --main-color: #ddd;
+  --main-border-color: #555;
+  --main-shadow-color: #000;
+  --menu-bg-color: #333;
+  --menu-bg-color-active: #222;
+  --menu-color: #ddd;
+  --menu-color-active: #eee;
+  --menu-color-inactive: #888;
+  /* --menu-text-color-hover: #eee; */
+  /* --inactive-opacity: 0.5; */
+}
+
+/* メニュー */
+.menu {
+  background: var(--menu-bg-color);
+  color: var(--menu-color);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+}
+.menu__item {
+  color: var(--menu-color-inactive);
+  text-align: center;
+  transition: all .3s;
+}
+.menu__item:hover {
+  /* background: var(--menu-bg-color-active); */
+  color: var(--menu-color-active);
+}
+.menu__item.is-active {
+  color: var(--menu-color-active);
+  /* background: var(--menu-bg-color-active); */
+  border-left: 2px solid var(--menu-color-active);
+  /* opacity: 1; */
+}
+
+/* メインエリア */
+#main {
+  background: var(--main-bg-color);
+  color: var(--main-color);
+  min-height: 100vh;
+  padding-left: 60px;
+  margin-bottom: 0;
+}
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+  color: var(--main-color);
+  font-weight: normal;
+  margin: 0;
+}
+.main__title {
+  /* box-shadow: 0 0 4px var(--main-shadow-color); */
+  border-bottom: solid 1px var(--main-bg-subcolor);
+  /* border-bottom: solid 1px #111; */
+  margin-bottom: 0;
+  padding: 1.5rem;
+}
+.label {
+  color: var(--main-color);
+}
+.input, .textarea {
+  color: var(--main-color);
+  background: var(--main-bg-color);
+  border-color: var(--main-border-color);
+}
+.input::placeholder, .textarea::placeholder {
+  color: var(--main-border-color);
+}
+.file-name {
+  border: none;
+}
+.file .file-label:first-child {
+  margin-right: 12px;
+}

@@ -1,0 +1,76 @@
+{
+  "categories": {
+    "study": {
+      "id": "study",
+      "text": "学ぶ",
+      "genre": {
+        "history": {
+          "id": "history",
+          "text": "歴史",
+          "items": [
+            {"id": "01", "text": "01"},
+            {"id": "02", "text": "02"},
+            {"id": "03", "text": "03"}
+          ]
+        },
+        "culture": {
+          "id": "culture",
+          "text": "文化",
+          "items": [
+            {"id": "01", "text": "01"},
+            {"id": "02", "text": "02"},
+            {"id": "03", "text": "03"}
+          ]
+        }
+      }
+    },
+    "sports": {
+      "id": "sports",
+      "text": "スポーツ",
+      "genre": {
+        "running": {
+          "id": "running",
+          "text": "ランニング",
+          "items": [
+            {"id": "01", "text": "01"},
+            {"id": "02", "text": "02"},
+            {"id": "03", "text": "03"}
+          ]
+        },
+        "cycling": {
+          "id": "cycling",
+          "text": "サイクリング",
+          "items": [
+            {"id": "01", "text": "01"},
+            {"id": "02", "text": "02"},
+            {"id": "03", "text": "03"}
+          ]
+        }
+      }
+    },
+    "gourmet": {
+      "id": "gourmet",
+      "text": "食べる",
+      "genre": {
+        "lunch": {
+          "id": "lunch",
+          "text": "ランチ",
+          "items": [
+            {"id": "01", "text": "01"},
+            {"id": "02", "text": "02"},
+            {"id": "03", "text": "03"}
+          ]
+        },
+        "dinner": {
+          "id": "dinner",
+          "text": "ディナー",
+          "items": [
+            {"id": "01", "text": "01"},
+            {"id": "02", "text": "02"},
+            {"id": "03", "text": "03"}
+          ]
+        }
+      }
+    }
+  }
+}

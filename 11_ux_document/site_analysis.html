@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>MVC練習 - ★★★</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <style>
+      .tabs {
+        padding: 12px 12px 0;
+        margin: 0 !important;
+      }
+      .icon {
+        vertical-align: bottom;
+      }
+      .sa-img--pc {
+        max-width: 600px;
+        margin: 0 auto 24px;
+      }
+      .sa-table__list {
+        margin-top: 0 !important;
+        margin-left: 1em !important;
+      }
+      table {
+        table-layout: fixed;
+      }
+      th {
+        width: 120px;
+      }
+      .sa-color {
+        height: 2em;
+        line-height: 2em;
+        margin-bottom: 0 !important;
+      }
+      .sa-color > span {
+        display: inline-block;
+        width: 1.5em;
+        height: 1.5em;
+        margin: -3px 6px 0 0;
+        border-radius: 4px;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tabs is-centered is-boxed">
+      <ul>
+        <li class="is-active">
+          <a href="">TechAcademy</a>
+        </li>
+        <li>
+          <a href="">企業 2</a>
+        </li>
+        <li>
+          <a href="">企業 3</a>
+        </li>
+      </ul>
+    </div>
+    <div class="container content">
+      <section class="section">
+        <div class="columns">
+          <div class="column">
+            <h1 class="has-text-centered">TechAcademy <span class="subtitle"> - トップページ</span></h1>
+            <div class="sa-img--pc">
+              <figure class="image is-16by9">
+                <img src="./images/techacademy.png">
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <h2 class="has-text-primary title is-4">
+              <span class="icon">
+                <i class="far fa-window-maximize"></i>
+              </span>
+              ページデータ
+            </h2>
+            <table class="table is-bordered">
+              <tbody>
+                <tr>
+                  <th>URL</th>
+                  <td><a href="https://techacademy.jp/" target="_blank">https://techacademy.jp/</a></td>
+                </tr>
+                <tr>
+                  <th>Title</th>
+                  <td>TechAcademy [テックアカデミー] | オンラインのプログラミングスクール</td>
+                </tr>
+                <tr>
+                  <th>Description</th>
+                  <td>プログラミングやアプリ開発を学べるオンラインスクール【TechAcademy（テックアカデミー）】。現役のプロのパーソナルメンターが学習をサポートするオンラインブートキャンプを開催。500社・25,000名を超える教育実績。日本e-Learning大賞受賞。運営会社は東証マザーズ上場企業の100％子会社。</td>
+                </tr>
+                <tr>
+                  <th>Keywords</th>
+                  <td>プログラミング, ブートキャンプ, エンジニア, ruby on rails, パーソナルメンター</td>
+                </tr>
+                <tr>
+                  <th>H1</th>
+                  <td>TechAcademy</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <hr>
+        <div class="columns">
+          <div class="column">
+            <h2 class="has-text-primary title is-4">
+              <span class="icon">
+                <i class="fas fa-info-circle"></i>
+              </span>
+              基本情報
+            </h2>
+            <table class="table is-bordered">
+              <tbody>
+                <tr>
+                  <th>デザイン</th>
+                  <td>
+                    <ul class="sa-table__list">
+                      <li>コントラスト強め</li>
+                      <li>ベースの配色はシンプル</li>
+                      <li>コースのパネルはそれぞれに色を当てている</li>
+                      <!-- <li>直線的</li> -->
+                      <!-- <li>余白多い</li> -->
+                      <!-- <li>画像多用</li> -->
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th>配色</th>
+                  <td>
+                    <p class="sa-color"><span style="background: #333333;"></span>#333333</p>
+                    <p class="sa-color"><span style="background: #5cb85c;"></span>#5cb85c</p>
+                    <p class="sa-color"><span style="background: #115a71;"></span>#115a71</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th>文言トーン</th>
+                  <td>自然なトーン</td>
+                </tr>
+                <tr>
+                  <th>訴求の重点</th>
+                  <td>
+                    <ul class="sa-table__list">
+                      <li>無料体験</li>
+                      <li>キャンペーン</li>
+                      <li>コースの豊富さ</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th>ターゲット</th>
+                  <td>「言語の名前はなんとなく聞いたことがある」初心者</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <hr>
+        <div class="columns">
+          <div class="column">
+            <h2 class="has-text-primary title is-4">
+              <span class="icon">
+                <i class="fas fa-list-alt"></i>
+              </span>
+              ヘッダーナビゲーション
+            </h2>
+            <ul>
+              <li>コース <span class="is-size-7">（各種コースへのメガメニューが展開）</span></li>
+              <li>セット <span class="is-size-7">（各種セットへのメガメニューが展開）</span></li>
+              <li>はじめての方へ <span class="is-size-7">（TechAcademyとは ／ 無料体験 ／ 説明会動画 ／ 体験会 ／ オススメコース診断）</span></li>
+              <li>転職サポート <span class="is-size-7">（TechAcademyキャリア ／ TechAcademy Pro ／ 無料カウンセリング）</span></li>
+              <li>法人のお客様</li>
+              <li>ログイン</li>
+            </ul>
+          </div>
+        <!-- </div>
+        <hr>
+        <div class="columns"> -->
+          <div class="column">
+            <h2 class="has-text-primary title is-4">
+              <span class="icon">
+                <i class="fas fa-file-alt"></i>
+              </span>
+              コンテンツ
+            </h2>
+            <ul>
+              <li>キャンペーン情報</li>
+              <li>無料体験</li>
+              <li>コース診断</li>
+              <li>最新のお知らせ</li>
+              <li>転職保証</li>
+              <li>ウケ放題</li>
+              <li>コース一覧</li>
+              <li>TechAcademyとは？</li>
+              <li>他スクールとの比較</li>
+              <li>受講生やメンターの声</li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <div class="columns">
+          <div class="column">
+            <h2 class="has-text-primary title is-4">
+              <span class="icon">
+                <i class="fas fa-search"></i>
+              </span>
+              考察
+            </h2>
+            <ul>
+              <li>コース名がシンプルで詳しい内容の説明は掲載していない。「言語の名前はなんとなく聞いたことがある」初心者をターゲットにしていると思われる。</li>
+              <li>ページ上部に「無料体験」の情報が複数配置されている。コンバージョンの重点として設定していると考えられる。</li>
+              <li>「コース診断」「転職保証」「ウケ放題」といったコンテンツから、「何から始めたらいいか分からない」ユーザーをターゲットにしていると考えられる。</li>
+              <li>「一覧を見る」リンクなどを利用して情報をコンパクトにするのでなく、情報を全て表示している。「多くのプログラムに対応できる」ことをアピールする意図があると考えられる。<br>各コースのリンクに別々の色を使用することで、配色からも「様々なコースがある」ことを表現できている。</li>
+              <li>コースのリンクに多くの色を使用しているが、ベースの配色をモノトーンにすることで、ごちゃごちゃした配色になるのを避けている。</li>
+              <li>レスポンシブデザインで作成されている。そのため、表示されている内容・配色などはスマートフォンと同じ。</li>
+              <li>会社の説明はページの下部に配置されている。「どのような会社か」について知っているユーザーが多いため優先度を下げたと考えられる。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- <script src="js/index.js"></script> -->
+  </body>
+</html>

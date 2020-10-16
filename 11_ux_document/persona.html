@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>MVC練習 - ★★★</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <style>
+      .tabs {
+        padding: 12px 12px 0;
+        margin: 0 !important;
+      }
+      .persona__img {
+        margin: 0 auto;
+      }
+      .icon {
+        vertical-align: bottom;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 参考画像：https://popinsight.jp/blog/wp-content/uploads/2016/11/2015081902-635x476.jpg -->
+    <div class="tabs is-centered is-boxed">
+      <ul>
+        <li class="is-active">
+          <a href="">ペルソナ 1</a>
+        </li>
+        <li>
+          <a href="">ペルソナ 2</a>
+        </li>
+        <li>
+          <a href="">ペルソナ 3</a>
+        </li>
+      </ul>
+    </div>
+    <div class="container content">
+      <section class="section">
+        <div class="columns is-vcentered">
+          <div class="column is-half-mobile is-one-quarter persona__img">
+            <p class="image is-1by1">
+              <img class="is-rounded" src="https://bulma.io/images/placeholders/480x480.png">
+            </p>
+          </div>
+          <div class="column">
+            <h1 class="has-text-centered-mobile">新しいことを慎重にやりたい <span class="has-text-weight-light is-size-4">タイプ</span></h1>
+            <p>新しいことを積極的に取り入れていきたいと考えている。展示会やセミナーなどで、直接業者の人に合ってから判断する。</p>
+          </div>
+        </div>
+        <hr>
+        <div class="columns">
+          <div class="column">
+            <h2 class="has-text-primary title is-4">
+              <span class="icon">
+                <i class="fas fa-user-alt"></i>
+              </span>
+              プロフィール
+            </h2>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th>名前</th>
+                  <td>山田 太郎</td>
+                </tr>
+                <tr>
+                  <th>業種</th>
+                  <td>ITソフトウェア</td>
+                </tr>
+                <tr>
+                  <th>企業</th>
+                  <td>従業員120名、売り上げ10億円</td>
+                </tr>
+                <tr>
+                  <th>部署</th>
+                  <td>営業推進部</td>
+                </tr>
+                <tr>
+                  <th>居住</th>
+                  <td>東京都世田谷区 1人暮らし</td>
+                </tr>
+                <tr>
+                  <th>大学</th>
+                  <td>都内大学 情報学科卒業</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="column">
+            <h2 class="has-text-primary title is-4">
+              <span class="icon">
+                <i class="fas fa-tags"></i>
+              </span>
+              キーワード
+            </h2>
+            <div class="tags are-medium">
+              <span class="tag">積極的</span>
+              <span class="tag">好奇心</span>
+              <span class="tag">慎重</span>
+            </div>
+            <h2 class="has-text-primary title is-4">
+              <span class="icon">
+                <i class="fas fa-desktop"></i>
+              </span>
+              メディア
+            </h2>
+            <div class="tags are-medium">
+              <ul>
+                <li><a href="https://www.facebook.com/" target="_blank">
+                  Facebook
+                  <!-- <span class="icon">
+                    <i class="fas fa-external-link-alt"></i>
+                  </span> -->
+                </a></li>
+                <li><a href="https://markezine.jp/" target="_blank">
+                  MarkeZine
+                  <!-- <span class="icon">
+                    <i class="fas fa-external-link-alt"></i>
+                  </span> -->
+                </a></li>
+                <li><a href="https://www.nikkei.com/" target="_blank">
+                  日経新聞
+                  <!-- <span class="icon">
+                    <i class="fas fa-external-link-alt"></i>
+                  </span> -->
+                </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div>
+          <h2 class="has-text-primary title is-4">
+            <span class="icon">
+              <i class="fas fa-address-card"></i>
+            </span>
+            エピソード
+          </h2>
+          <p>大学時代にアルバイトしていたベンチャー企業に大学卒業後、就職した。</p>
+          <p>入社当時から営業部に所属し、大手企業に対して自社のソフトウェア導入の提案・販売活動をしてきた。学ぶこと、新しいこと好きなことを活かして、自ら先輩や同僚から学びながら、お客さまのニーズに合わせた提案と、提案を活かすためのソフトウェアのデモまで自分自身でできるようになった。ここに至るまでには多くの失敗や挫折もあったが、上司や同僚に支えられながら、困難を乗り越えてきた。</p>
+          <p>会社の拡大につき、事業推進部が昨年発足することとなった。自ら手を上げて、上司に相談し、今の仕事につくこととなった。これまで営業しかやったことなかったため、マーケティング業務についての知識はなかった。</p>
+        </div>
+        <hr>
+        <div>
+          <h2 class="has-text-primary title is-4">
+            <span class="icon">
+              <i class="fas fa-briefcase"></i>
+            </span>
+            仕事の役割
+          </h2>
+          <p><span class="has-text-weight-bold">職務内容</span>：営業活動を支援するために、展示会出展の業務、営業状況のとりまとめ、メルマガ発行などのマーケティング活動の業務をほぼ1人でやっている。新しいことや重要な判断は必ず上司に相談して判断をあおぐ</p>
+          <p><span class="has-text-weight-bold">仕事の意欲</span>：フロントの営業の仕事から、去年この仕事に変更。元々マーケティングには興味がある。新しいことが好きでこの仕事への意欲は非常に高い。マーケティング手法を書籍や本で調べながら、新しい方法を取り入れ、チャレンジすることが楽しい。</p>
+          <p><span class="has-text-weight-bold">情報への接触</span>：インターネットを活用して情報を収集し、興味がある企業や製品は積極的に展示会やセミナーに参加して詳細の情報を集める。業者への接触は、展示会やセミナーとWebからの問い合わせがほとんど。調べていない会社の営業電話にはあまり耳をかさない。</p>
+        </div>
+        <hr>
+        <div>
+          <h2 class="has-text-primary title is-4">
+            <span class="icon">
+              <i class="fas fa-award"></i>
+            </span>
+            ゴール
+          </h2>
+          <ul>
+            <li>将来は、自らの会社を設立し経営に携わりたいと思っている。</li>
+            <li>まずは営業やマーケティングの経験を積むため、なんでもチャレンジして自分自身の視野を広げたいと思っている。自分を早く成長させたい。</li>
+            <li>上司から色々といわれる前に自分自身で考え行動する。同僚や上司から感謝されたり評価されることによって、仕事のパフォーマンスを向上していきたい。</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <!-- <script src="js/index.js"></script> -->
+  </body>
+</html>

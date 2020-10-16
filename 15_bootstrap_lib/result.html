@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>書籍API</title>
+  </head>
+  <body>
+    <div class="container pt-4">
+      <h1>検索結果</h1>
+      <p>
+        <a href="search.html" class="btn btn-outline-secondary btn-sm">検索条件を変更</a>
+        <button class="btn btn-outline-secondary btn-sm" type="button" data-toggle="collapse" data-target="#search-info" aria-expanded="false" aria-controls="search-info">検索条件を確認</button>
+      </p>
+      <div class="collapse" id="search-info">
+        <div class="card card-body mb-3" id="js-search-info__content"></div>
+      </div>
+      <div id="js-search-result">
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <div id="js-pagenation"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="js/result.js"></script>
+  </body>
+</html>

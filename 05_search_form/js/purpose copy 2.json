@@ -1,0 +1,89 @@
+{
+  "categories": {
+    "study": {
+      "id": "study",
+      "text": "学ぶ",
+      "genres": [
+        {"id": "history"},
+        {"id": "culture"}
+      ]
+    },
+    "sports": {
+      "id": "sports",
+      "text": "スポーツ",
+      "genres": [
+        {"id": "running"},
+        {"id": "cycling"}
+      ]
+    },
+    "gourmet": {
+      "id": "gourmet",
+      "text": "食べる",
+      "genres": [
+        {"id": "lunch"},
+        {"id": "dinner"}
+      ]
+    }
+  },
+  "genres": {
+    "history": {
+      "id": "history",
+      "text": "歴史",
+      "purposes": [
+        {"id": "01"},
+        {"id": "02"},
+        {"id": "03"}
+      ]
+    },
+    "culture": {
+      "id": "culture",
+      "text": "文化",
+      "purposes": [
+        {"id": "01"},
+        {"id": "02"},
+        {"id": "03"}
+      ]
+    },
+    "running": {
+      "id": "running",
+      "text": "ランニング",
+      "purposes": [
+        {"id": "01"},
+        {"id": "02"},
+        {"id": "03"}
+      ]
+    },
+    "cycling": {
+      "id": "cycling",
+      "text": "サイクリング",
+      "purposes": [
+        {"id": "01"},
+        {"id": "02"},
+        {"id": "03"}
+      ]
+    },
+    "lunch": {
+      "id": "lunch",
+      "text": "ランチ",
+      "purposes": [
+        {"id": "01"},
+        {"id": "02"},
+        {"id": "03"}
+      ]
+    },
+    "dinner": {
+      "id": "dinner",
+      "text": "ディナー",
+      "purposes": [
+        {"id": "01"},
+        {"id": "02"},
+        {"id": "03"}
+      ]
+    }
+  },
+  "purposes": [
+    {"id": "01", "text": "目的01"},
+    {"id": "02", "text": "目的02"},
+    {"id": "03", "text": "目的03"}
+  ]
+}
