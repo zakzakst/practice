@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>MVC練習 - ★★★</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <style>
+      @media screen and (min-width: 769px) {
+        h2 {
+          padding-top: 24px;
+        }
+      }
+    </style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart1);
+      google.charts.setOnLoadCallback(drawChart2);
+
+    function drawChart1() {
+      var data = google.visualization.arrayToDataTable([
+        ['会社名', 'トーン', '費用', '社内外'],
+        ['自社', 1, 2, '自社'],
+        ['将来', -0.5, 1, '自社（将来）'],
+        ['B社', -1, -2, '他社'],
+        ['C社', 2, 1, '他社'],
+        ['D社', -2, -1, '他社'],
+        ['E社', -1, 0, '他社'],
+      ]);
+      // オプションの設定
+      var options = {
+        // title: 'トーン／費用　マップ',
+        // titlePosition: 'out',
+        // titleTextStyle: {
+        //   fontSize: 16
+        // },
+        hAxis: {
+          title: 'トーン',
+          titleTextStyle: {
+            bold: true,
+          },
+          maxValue: 3,
+          minValue: -3,
+          viewWindow: {
+            max: 3,
+            min: -3
+          },
+          textPosition: 'out', // none
+          ticks: [{v:-3, f:'カジュアル'}, {v:3, f:'丁寧'}],
+          baseline: 0,
+          baselineColor: 'gray',
+        },
+        vAxis: {
+          title: '費用',
+          titleTextStyle: {
+            bold: true,
+          },
+          maxValue: 3,
+          minValue: -3,
+          viewWindow: {
+            max: 3,
+            min: -3
+          },
+          textPosition: 'out', // none
+          ticks: [{v:-3, f:'低'}, {v:3, f:'高'}],
+          baseline: 0,
+          baselineColor: 'gray',
+        },
+        legend: {
+          position: 'none',
+        },
+        bubble: {
+          stroke: '#fff',
+          opacity: 0.2,
+          textStyle: {
+            auraColor: 'none',
+            bold: true,
+          }
+        },
+        tooltip: {
+          trigger: 'none',
+        },
+        axisTitlesPosition: 'out',
+        width: '100%',
+        height: 400,
+        chartArea: {
+          // left: 50,
+          top: 30,
+          height: '75%',
+          width: '75%',
+        },
+        series: {
+          '自社': {color: 'green'},
+          '自社（将来）': {color: 'blue'},
+          '他社': {color: 'gray'},
+        }
+      };
+      // インスタンスの生成
+      var chart = new google.visualization.BubbleChart(document.getElementById('chart1'));
+      // チャートを描画
+      chart.draw(data, options);
+    }
+
+    function drawChart2() {
+      var data = google.visualization.arrayToDataTable([
+        ['会社名', '技術力', '対応領域', '社内外'],
+        ['自社', 2, -2, '自社'],
+        ['将来', 2, 0, '自社（将来）'],
+        ['B社', 2, 1.5, '他社'],
+        ['C社', -1, 1, '他社'],
+        ['D社', -2, 1, '他社'],
+        ['E社', 1, 1, '他社'],
+      ]);
+      // オプションの設定
+      var options = {
+        // title: '技術力／対応領域　マップ',
+        // titlePosition: 'out',
+        // titleTextStyle: {
+        //   fontSize: 16
+        // },
+        hAxis: {
+          title: '技術力',
+          titleTextStyle: {
+            bold: true,
+          },
+          maxValue: 3,
+          minValue: -3,
+          viewWindow: {
+            max: 3,
+            min: -3
+          },
+          textPosition: 'out', // none
+          ticks: [{v:-3, f:'低'}, {v:3, f:'高'}],
+          baseline: 0,
+          baselineColor: 'gray',
+        },
+        vAxis: {
+          title: '対応領域',
+          titleTextStyle: {
+            bold: true,
+          },
+          maxValue: 3,
+          minValue: -3,
+          viewWindow: {
+            max: 3,
+            min: -3
+          },
+          textPosition: 'out', // none
+          ticks: [{v:-3, f:'狭い'}, {v:3, f:'広い'}],
+          baseline: 0,
+          baselineColor: 'gray',
+        },
+        legend: {
+          position: 'none',
+        },
+        bubble: {
+          stroke: '#fff',
+          opacity: 0.2,
+          textStyle: {
+            auraColor: 'none',
+            bold: true,
+          }
+        },
+        tooltip: {
+          trigger: 'none',
+        },
+        axisTitlesPosition: 'out',
+        width: '100%',
+        height: 400,
+        chartArea: {
+          // left: 50,
+          top: 30,
+          height: '75%',
+          width: '75%',
+        },
+        series: {
+          '自社': {color: 'green'},
+          '自社（将来）': {color: 'blue'},
+          '他社': {color: 'gray'},
+        }
+      };
+      // インスタンスの生成
+      var chart = new google.visualization.BubbleChart(document.getElementById('chart2'));
+      // チャートを描画
+      chart.draw(data, options);
+    }
+  </script>
+  </head>
+  <body>
+    <div class="container content">
+      <section class="section">
+        <h1 class="has-text-centered">ポジショニングマップと今後の展望</h1>
+        <div class="box">
+          <div class="columns">
+            <div class="column is-half">
+              <div id="chart1"></div>
+            </div>
+            <div class="column is-half">
+              <h2 class="has-text-primary title is-4">今後はより広い顧客に対応していきたい</h2>
+              <p>現在、丁寧な仕事が認められ顧客から信頼いただいている。しかし、同時に近寄りがたい印象ももたれてしまっている。</p>
+              <p>今後は、幅広い業務に対応できることをアピールし、顧客の幅を広げていきたい。</p>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="columns">
+            <div class="column is-half">
+              <div id="chart2"></div>
+            </div>
+            <div class="column is-half">
+              <h2 class="has-text-primary title is-4">専門性を活かしつつ業務領域を広げていきたい</h2>
+              <p>現在、サーバーサイドの技術力が認められ顧客から信頼いただいている。しかし同時に、顧客からはデザイン・フロント部分の業務も貫通して任せたいとの声をいただいている。</p>
+              <p>今後は、幅広い業務に対応できることをアピールし、対応業務の幅を広げていきたい。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- <script src="js/index.js"></script> -->
+  </body>
+</html>

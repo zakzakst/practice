@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>MVC練習 - ★★★</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <style>
+      .tabs {
+        padding: 12px 12px 0;
+        margin: 0 !important;
+      }
+      table {
+        table-layout: fixed;
+      }
+      th {
+        text-align: center !important;
+        vertical-align: middle !important;
+      }
+      tr > td {
+        position: relative;
+        font-size: .85em;
+      }
+      tr > td::before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: .5em;
+        bottom: .5em;
+        left: 0;
+        border-left: 2px dotted #dbdbdb;
+      }
+      tr > * {
+        width: 240px;
+      }
+      tr > *:first-child {
+        width: 120px;
+      }
+      .content table td, .content table th {
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+      }
+      ul {
+        margin-left: 1em !important;
+        margin-top: 0 !important;
+      }
+      .cj-emotion td {
+        padding-top: calc(1.5em + 30px) !important;
+      }
+      .cj-emotion .icon {
+        display: flex;
+        height: auto;
+        width: 100%;
+        justify-content: space-around;
+      }
+      svg.cj-emotion__icon--nice {
+        transform: translateY(-30px);
+      }
+      svg.cj-emotion__icon--good {
+        transform: translateY(-20px);
+      }
+      svg.cj-emotion__icon--normal {
+        transform: translateY(-10px);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 参考画像：https://goodpatch.com/blog/wp-content/uploads/2018/07/711496a69d003284839c8b293792dbd8.jpeg -->
+    <div class="tabs is-centered is-boxed">
+      <ul>
+        <li class="is-active">
+          <a href="">ペルソナ 1</a>
+        </li>
+        <li>
+          <a href="">ペルソナ 2</a>
+        </li>
+        <li>
+          <a href="">ペルソナ 3</a>
+        </li>
+      </ul>
+    </div>
+    <section class="section content">
+      <div class="table-container">
+        <table class="table is-striped">
+          <thead>
+            <tr>
+              <th></th>
+              <th>検討前・<br>興味を持つきっかけ</th>
+              <th>情報収集・閲覧</th>
+              <th>閲覧</th>
+              <th>料理</th>
+              <th>食事</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>タッチ<br>ポイント</th>
+              <td>Instagram、LINE、友人、家族</td>
+              <td>Instagram、Google、他のレシピサイト</td>
+              <td>チャット、LINE、Instagram</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>行動</th>
+              <td>
+                <ul>
+                  <li>結婚が決まりそう</li>
+                  <li>結婚が決まった</li>
+                  <li>自炊は同じレシピばかり</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>他のレシピサイトで検索したが作れるレシピが無かった</li>
+                  <li>Googleで「レシピ 簡単」で検索した</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>ある素材を軸に検索した</li>
+                  <li>作りたいと思えるレシピがあった</li>
+                  <li>作りたいレシピは課金対象だった</li>
+                  <li>1カ月無料会員になれば、閲覧できるようなので会員登録した</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>料理をした</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>旦那と食べた</li>
+                  <li>美味しかった</li>
+                  <li>褒められた</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>思考</th>
+              <td>
+                <ul>
+                  <li>良い食事を提供したい</li>
+                  <li>妻の役割を果たしたい</li>
+                  <li>家で食事をしたい</li>
+                  <li>良い妻だと思われたい</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>他のレシピサイトだと条件に合うレシピが出てこない</li>
+                  <li>完成写真を見て作ろうというモチベーションが上がる</li>
+                  <li>インスタ映えするものは手間がかかるものが多い</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>作りたいレシピが課金対象や広告で不快になった</li>
+                  <li>登録後はスムーズにレシピ通りに作ることができた</li>
+                  <li>Instagramにアップするといいね！がたくさんついた</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>足りない材料を買い揃えるのが面倒くさい</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>嬉しい</li>
+                  <li>次は何を作ろう</li>
+                </ul>
+              </td>
+            </tr>
+            <tr class="cj-emotion">
+              <th>感情</th>
+              <td>
+                <span class="icon has-text-primary">
+                  <i class="fas fa-meh fa-3x cj-emotion__icon--normal"></i>
+                  <i class="fas fa-smile fa-3x cj-emotion__icon--good"></i>
+                </span>
+              </td>
+              <td>
+                <span class="icon has-text-primary">
+                  <i class="fas fa-frown fa-3x"></i>
+                  <i class="fas fa-smile fa-3x cj-emotion__icon--good"></i>
+                </span>
+              </td>
+              <td>
+                <span class="icon has-text-primary">
+                  <i class="fas fa-frown fa-3x"></i>
+                  <i class="fas fa-smile fa-3x cj-emotion__icon--good"></i>
+                </span>
+              </td>
+              <td>
+                <span class="icon has-text-primary">
+                  <i class="fas fa-meh fa-3x cj-emotion__icon--normal"></i>
+                </span>
+              </td>
+              <td>
+                <span class="icon has-text-primary">
+                  <i class="fas fa-laugh-squint fa-3x cj-emotion__icon--nice"></i>
+                </span>
+              </td>
+            </tr>
+            <tr class="has-text-white has-background-primary">
+              <th class="has-text-white">課題</th>
+              <td>
+                <ul>
+                  <li>料理経験が少ない</li>
+                  <li>レシピ知識が乏しい</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>レシピの探し方がわからず、ポータルサイトへと行っていた</li>
+                  <li>イメージにあったレシピがない</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>有料と無料の違いがわからない</li>
+                  <li>広告にはなんとなく不信感を持つ</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>材料の購入</li>
+                </ul>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>解決策</th>
+              <td>
+                <ul>
+                  <li>チャット相談機能</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>独自の検討軸（時短、食材、目的、季節など）</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>すぐ返事がもらえる</li>
+                  <li>有料と無料がわかるようにする</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>買える</li>
+                  <li>食材が届く</li>
+                </ul>
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- <script src="js/index.js"></script> -->
+  </body>
+</html>

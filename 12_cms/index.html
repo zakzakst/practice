@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>MVC練習 - ★★★</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <style>
+      .navbar-end {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .is-128x128 {
+        margin: 0 auto;
+      }
+      .card {
+        height: 100%;
+      }
+    </style>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+  </head>
+  <body>
+    <!-- ▼▼▼ ヒーローエリア ▼▼▼ -->
+    <section class="hero is-dark is-medium">
+      <div class="hero-head">
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-end">
+              <span class="navbar-item">
+                <a class="button is-primary" id="phone-btn">
+                  <span class="icon">
+                    <i class="fas fa-mobile-alt"></i>
+                  </span>
+                  <span id="phone-btn__text">
+                    <!-- 00-0000-0000 -->
+                  </span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="hero-body has-text-centered">
+        <div class="container">
+          <h1 class="title">タイトル</h1>
+          <p id="main__text">
+            <!-- ユーザーが最初に目にする画面。<br>パッと見て「ぼんやりとでもいいので何についてのページか」が伝わることを一番の目的にする。<br>キャッチフレーズなどを載せることもある。<br>ユーザーが一番欲しがっている情報（※イベントページなら日付など）を載せる場合もある。 -->
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-foot">
+        <nav class="tabs is-centered">
+          <div class="container">
+            <ul id="page-links">
+              <!-- <li><a>Section01</a></li>
+              <li><a>Section02</a></li>
+              <li><a>Section03</a></li>
+              <li><a>Section04</a></li>
+              <li><a>Section05</a></li> -->
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>MVC練習 - アニメーション</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <style>
+      .navbar-end {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .is-128x128 {
+        margin: 0 auto;
+      }
+      .card {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ▼▼▼ ヒーローエリア ▼▼▼ -->
+    <section class="hero is-dark is-medium">
+      <div class="hero-head">
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-end">
+              <span class="navbar-item">
+                <a class="button is-primary">
+                  <span class="icon">
+                    <i class="fas fa-mobile-alt"></i>
+                  </span>
+                  <span>00-0000-0000</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="hero-body has-text-centered">
+        <div class="container">
+          <h1 class="title">タイトル</h1>
+          <p>ユーザーが最初に目にする画面。<br>パッと見て「ぼんやりとでもいいので何についてのページか」が伝わることを一番の目的にする。<br>キャッチフレーズなどを載せることもある。<br>ユーザーが一番欲しがっている情報（※イベントページなら日付など）を載せる場合もある。</p>
+        </div>
+      </div>
+
+      <div class="hero-foot">
+        <nav class="tabs is-centered">
+          <div class="container">
+            <ul>
+              <li><a>Section01</a></li>
+              <li><a>Section02</a></li>
+              <li><a>Section03</a></li>
+              <li><a>Section04</a></li>
+              <li><a>Section05</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ▼▼▼ リードセクション ▼▼▼ -->
+    <section class="section">
+      <div class="container content has-text-centered">
+        <h2>リード文</h2>
+        <p>トップ画面で説明した「何についてのページか」をより詳しく説明する部分。コンセプトや想いが記載されることもある。<br>文章が長くなる場合は、折り返しを考慮して2カラムに分けることもある。コンセプト画像や動画を一緒に配置することもある。<br>「問題提起」が一緒に記載されることもある。</p>
+      </div>
+      <div class="container content is-small">
+        <div class="columns">
+          <div class="column">
+            <p>【ナビゲーションの補足】ナビゲーションはページの最上部に配置するのがスタンダード。<br>ランディングページなどサイト構成がシンプルなものの場合は、メイン画像の下に配置することで、<br>メイン画像の印象を強めることもある（※ページ内リンクの扱いに近いかもしれない）</p>
+          </div>
+          <div class="column">
+            <p>【ナビゲーションの補足】最上部のナビゲーションの場合、以下の使われ方が多い。<br>・左端：ロゴ画像（※何のサイトなのか？自分がアクセスしたページは間違ってないか？信頼できるサイトなのか？ などを一番最初に目につく位置で伝える）<br>・右端：ログインボタン／お問い合わせボタン（※全員が利用するわけではないが、一定の人は必ず必要とする項目を認識してもらえる場所に置く）</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <figure class="image is-3by1">
+          <img src="https://bulma.io/images/placeholders/720x240.png" alt="Image">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ▼▼▼ 特徴セクション ▼▼▼ -->
+    <section class="section">
+      <div class="container content">
+        <h2 class="has-text-centered">特徴</h2>
+        <div class="columns">
+          <div class="column is-one-third-tablet">
+            <p class="image is-2by1">
+              <img src="https://bulma.io/images/placeholders/640x320.png" alt="Placeholder image">
+            </p>
+          </div>
+          <div class="column is-two-thirds-tablet">
+            <h3>特徴 1</h3>
+            <p>ユーザーが得られるメリットの説明。この部分に入るのは、ページの種類によって異なる。商品であれば「できること」「他製品との差別化部分」など。活動であれば「コンセプト」や「実施中のイベント」など。お店であれば「こだわりの点」など。<br>商品によってはこの項目の前に「問題提起」があって、その解決方法の説明みたいなパターンもある。</p>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-one-third-tablet">
+            <p class="image is-2by1">
+              <img src="https://bulma.io/images/placeholders/640x320.png" alt="Placeholder image">
+            </p>
+          </div>
+          <div class="column is-two-thirds-tablet">
+            <h3>特徴 2</h3>
+            <p>文章メインで多く説明する必要があればカラム幅を調整して、適切に文章が折り返すようにする。</p>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-one-third-tablet">
+            <p class="image is-2by1">
+              <img src="https://bulma.io/images/placeholders/640x320.png" alt="Placeholder image">
+            </p>
+          </div>
+          <div class="column is-two-thirds-tablet">
+            <h3>特徴 3</h3>
+            <p>新規のサービスなど、ユーザーが内容をイメージできていないと想定される場合は、このセクションのボリュームを大きくすることがある。逆にある程度内容の想像できるものの場合は、ここのボリュームを少なくして、後の「実績」や「内容詳細」などの具体的な内容の比重を大きくする。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ▼▼▼ 機能セクション ▼▼▼ -->
+    <section class="section">
+      <div class="container content">
+        <h2 class="has-text-centered">機能</h2>
+        <div class="columns is-multiline">
+          <div class="column is-half-tablet">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-64x64">
+                  <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <h3>機能 1</h3>
+                  <p>前述の「特徴」を実現するための具体的な能力の記載。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-half-tablet">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-64x64">
+                  <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <h3>機能 2</h3>
+                  <p>「ビジネスのコミュニケーションを活性化する」だったら、「チャット機能」「wiki機能」など。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-half-tablet">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-64x64">
+                  <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <h3>機能 3</h3>
+                  <p>「こだわりの食材で一流のディナー」だったら、「シェフの経歴」「取り寄せている食材の説明」など。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-half-tablet">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-64x64">
+                  <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <h3>機能 4</h3>
+                  <p>「特徴」で記載した内容を、具体的な説明で「ああ、それだったら確かに実現できそうだね」と思ってもらう。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-half-tablet">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-64x64">
+                  <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <h3>機能 5</h3>
+                  <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-half-tablet">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-64x64">
+                  <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <h3>機能 6</h3>
+                  <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ▼▼▼ 実績セクション ▼▼▼ -->
+    <section class="section">
+      <div class="container content">
+        <h2 class="has-text-centered">実績</h2>
+        <div class="columns is-multiline">
+          <div class="column is-half-tablet is-one-quarter-desktop">
+            <div class="card">
+              <div class="card-image">
+                <p class="image is-2by1">
+                  <img src="https://bulma.io/images/placeholders/640x320.png" alt="Placeholder image">
+                </p>
+              </div>
+              <div class="card-content">
+                <h3>実績 1</h3>
+                <p>ユーザーに信頼してもらうために記載。詳細な内容を載せたページにリンクさせることも多い。</p>
+              </div>
+            </div>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop">
+            <div class="card">
+              <div class="card-image">
+                <p class="image is-2by1">
+                  <img src="https://bulma.io/images/placeholders/640x320.png" alt="Placeholder image">
+                </p>
+              </div>
+              <div class="card-content">
+                <h3>実績 2</h3>
+                <p>ユーザーが気にするであろう項目・キーワードを記載しておく（※「規模」「利用技術」「工数」 など）</p>
+              </div>
+            </div>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop">
+            <div class="card">
+              <div class="card-image">
+                <p class="image is-2by1">
+                  <img src="https://bulma.io/images/placeholders/640x320.png" alt="Placeholder image">
+                </p>
+              </div>
+              <div class="card-content">
+                <h3>実績 3</h3>
+                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+              </div>
+            </div>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop">
+            <div class="card">
+              <div class="card-image">
+                <p class="image is-2by1">
+                  <img src="https://bulma.io/images/placeholders/640x320.png" alt="Placeholder image">
+                </p>
+              </div>
+              <div class="card-content">
+                <h3>実績 4</h3>
+                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="has-text-right">
+          <button class="button is-text">
+            実績をもっと見る
+            <i class="fas fa-arrow-circle-right"></i>
+          </button>
+        </p>
+      </div>
+    </section>
+
+    <!-- ▼▼▼ 商品詳細・メニュー・プランセクション ▼▼▼ -->
+    <section class="section has-background-light">
+      <div class="container content">
+        <h2 class="has-text-centered">商品詳細</h2>
+        <div class="columns">
+          <div class="column">
+            <div class="box">
+              <div class="columns">
+                <div class="column is-narrow">
+                  <p class="image is-128x128">
+                    <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+                  </p>
+                </div>
+                <div class="column">
+                  <h3>メニュー 1</h3>
+                  <p>「これだけの機能・実績があれば信頼はできるだろう」と思ってもらったタイミングで、具体的な商品バリエーションを確認してもらう。</p>
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <th>商品内容</th>
+                        <td>xxxxxxxxxx</td>
+                      </tr>
+                      <tr>
+                        <th>発売日</th>
+                        <td>xxxxxxxxxx</td>
+                      </tr>
+                      <tr>
+                        <th>値段</th>
+                        <td>10,980円</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p><a class="button is-primary">この商品を購入する</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="box">
+              <div class="columns">
+                <div class="column is-narrow">
+                  <p class="image is-128x128">
+                    <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+                  </p>
+                </div>
+                <div class="column">
+                  <h3>メニュー 2</h3>
+                  <p>この場面では「自分に合っているメニュー・プランは何だろう」と考えている場合が多いので、比較・検討に必要な項目を記載しておく。</p>
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <th>商品内容</th>
+                        <td>xxxxxxxxxx</td>
+                      </tr>
+                      <tr>
+                        <th>発売日</th>
+                        <td>xxxxxxxxxx</td>
+                      </tr>
+                      <tr>
+                        <th>値段</th>
+                        <td>20,980円</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p><a class="button is-primary">この商品を購入する</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ▼▼▼ 使い方・申し込み方法セクション ▼▼▼ -->
+    <section class="section">
+      <div class="container content">
+        <h2 class="has-text-centered">使い方・申し込み方法 など</h2>
+        <div class="columns">
+          <div class="column is-one-third-tablet">
+            <h3>ステップ 1</h3>
+            <p>商品の内容はある程度信頼してくれたユーザーに対して、諸々の不安を取り除くことを意識する。</p>
+          </div>
+          <div class="column is-one-third-tablet">
+            <h3>ステップ 2</h3>
+            <p>特殊なパターンやボリュームが大きくなりそうな部分は、リンクで別ページに記載する方法もある。</p>
+          </div>
+          <div class="column is-one-third-tablet">
+            <h3>ステップ 3</h3>
+            <p>実際にはユーザーにとって、多かれ少なかれ「手間」がかかる部分なので、「使うと楽しそう」「簡単に申し込めそう」といったポジティブなイメージを持ってもらえるようにする。（※デザイン・イラスト・ライティングに気をつかう）</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ▼▼▼ ギャラリーセクション ▼▼▼ -->
+    <section class="section">
+      <div class="container content has-text-centered">
+        <h2 class="">ギャラリー</h2>
+        <p>商品の利用シーンなど、利用時のイメージがわくような画像を載せる。</p>
+        <div class="columns is-mobile is-gapless is-multiline">
+          <div class="column is-half-mobile is-one-quarter-tablet">
+            <p class="image is-1by1">
+              <img src="https://bulma.io/images/placeholders/480x480.png" alt="Placeholder image">
+            </p>
+          </div>
+          <div class="column is-half-mobile is-one-quarter-tablet">
+            <p class="image is-1by1">
+              <img src="https://bulma.io/images/placeholders/480x480.png" alt="Placeholder image">
+            </p>
+          </div>
+          <div class="column is-half-mobile is-one-quarter-tablet">
+            <p class="image is-1by1">
+              <img src="https://bulma.io/images/placeholders/480x480.png" alt="Placeholder image">
+            </p>
+          </div>
+          <div class="column is-half-mobile is-one-quarter-tablet">
+            <p class="image is-1by1">
+              <img src="https://bulma.io/images/placeholders/480x480.png" alt="Placeholder image">
+            </p>
+          </div>
+        </div>
+        <p class="has-text-right">
+          <button class="button is-text">
+            画像をもっと見る
+            <i class="fas fa-arrow-circle-right"></i>
+          </button>
+        </p>
+      </div>
+    </section>
+
+    <!-- ▼▼▼ お知らせセクション ▼▼▼ -->
+    <section class="section">
+      <div class="container content">
+        <h2 class="has-text-centered">お知らせ</h2>
+        <div class="columns is-multiline">
+          <div class="column is-half-tablet is-one-quarter-desktop">
+            <div class="card">
+              <div class="card-image">
+                <p class="image is-2by1">
+                  <img src="https://bulma.io/images/placeholders/640x320.png" alt="Placeholder image">
+                </p>
+              </div>
+              <div class="card-content">
+                <h3>お知らせ 1</h3>
+                <p>現在のビジネスは「作って終わり」でなく、「改善を続ける・新機能を付けてもっと使いやすくする」といった姿勢が求められる。そのような状況で、商品の制作者が活発なところを伝え、商品への信頼を強めてもらう。</p>
+              </div>
+            </div>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop">
+            <div class="card">
+              <div class="card-image">
+                <p class="image is-2by1">
+                  <img src="https://bulma.io/images/placeholders/640x320.png" alt="Placeholder image">
+                </p>
+              </div>
+              <div class="card-content">
+                <h3>お知らせ 2</h3>
+                <p>「作っている人がどんな人なのか」を知ってもらい。商品の利用者からファンになってもらう。noteやブログとの連携も一案。</p>
+              </div>
+            </div>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop">
+            <div class="card">
+              <div class="card-image">
+                <p class="image is-2by1">
+                  <img src="https://bulma.io/images/placeholders/640x320.png" alt="Placeholder image">
+                </p>
+              </div>
+              <div class="card-content">
+                <h3>お知らせ 3</h3>
+                <p>「こんな使い方もありますよ」といった提案をして、ユーザーにより商品を好きになってもらう。</p>
+              </div>
+            </div>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop">
+            <div class="card">
+              <div class="card-image">
+                <p class="image is-2by1">
+                  <img src="https://bulma.io/images/placeholders/640x320.png" alt="Placeholder image">
+                </p>
+              </div>
+              <div class="card-content">
+                <h3>お知らせ 4</h3>
+                <p>イベントなどを開催する場合の告知をする。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="has-text-right">
+          <button class="button is-text">
+            お知らせをもっと見る
+            <i class="fas fa-arrow-circle-right"></i>
+          </button>
+        </p>
+      </div>
+    </section>
+
+    <!-- ▼▼▼ お客様の声セクション ▼▼▼ -->
+    <section class="section">
+      <div class="container content">
+        <h2 class="has-text-centered">お客様の声</h2>
+        <div class="columns">
+          <div class="column">
+            <div class="box">
+              <div class="columns">
+                <div class="column is-narrow">
+                  <p class="image is-128x128">
+                    <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+                  </p>
+                </div>
+                <div class="column">
+                  <h3>お客様 1</h3>
+                  <p>第三者の声を載せることで、ユーザーに信頼・安心してもらう。初めての人が不安になると思われる部分への意見などがあるとなお良い。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="box">
+              <div class="columns">
+                <div class="column is-narrow">
+                  <p class="image is-128x128">
+                    <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+                  </p>
+                </div>
+                <div class="column">
+                  <h3>お客様 2</h3>
+                  <p>ターゲットユーザーと近い属性（※「年齢」「価値観」「性別」など）の人の声を載せることで、共感してもらいやすくなる。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="has-text-right">
+          <button class="button is-text">
+            お客様の声をもっと見る
+            <i class="fas fa-arrow-circle-right"></i>
+          </button>
+        </p>
+      </div>
+    </section>
+
+    <!-- ▼▼▼ FAQセクション ▼▼▼ -->
+    <section class="section">
+      <div class="container content">
+        <h2 class="has-text-centered">FAQ</h2>
+        <div class="box">
+          <h3>Q：質問1のテキストが入ります。</h3>
+          <p>初めての人が不安になると思われる部分への返答をあらかじめ記載しておくことで、ユーザーに安心してもらう。</p>
+        </div>
+        <div class="box">
+          <h3>Q：質問2のテキストが入ります。</h3>
+          <p>FAQが記載されていることで、直接の問い合わせが少なくなり、本業に専念できるメリットもある。</p>
+        </div>
+        <div class="box">
+          <h3>Q：質問3のテキストが入ります。</h3>
+          <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+        </div>
+        <p class="has-text-right">
+          <button class="button is-text">
+            FAQをもっと見る
+            <i class="fas fa-arrow-circle-right"></i>
+          </button>
+        </p>
+      </div>
+    </section>
+
+    <!-- ▼▼▼ 会社概要セクション ▼▼▼ -->
+    <section class="section">
+      <div class="container content">
+        <h2 class="has-text-centered">会社情報</h2>
+        <p class="has-text-centered">会社の情報を記載することで、きちんとしていると信頼してもらえる（※記載していないと信頼が下がる面が強いか？）<br>実店舗での経営などユーザーに会社に来てもらう必要が多い業態の場合は「住所・アクセス」部分を切り分けて、より詳細に説明することもある。</p>
+        <div class="columns">
+          <div class="column">
+            <p class="image is-2by1">
+              <img src="https://bulma.io/images/placeholders/640x320.png" alt="Placeholder image">
+            </p>
+          </div>
+          <div class="column">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th>住所</th>
+                  <td>東京都○○区○○町 0-00-00<br>○○ビル 1階</td>
+                </tr>
+                <tr>
+                  <th>営業時間</th>
+                  <td>
+                    <strong>平日</strong><br>
+                    10:00～17:00<br>
+                    <strong>土日</strong><br>
+                    13:00～17:00
+                  </td>
+                </tr>
+                <tr>
+                  <th>定休日</th>
+                  <td>祝日</td>
+                </tr>
+                <tr>
+                  <th>アクセス</th>
+                  <td>○○線○○駅○○口より 徒歩5分</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ▼▼▼ 申し込み・問い合わせ ▼▼▼ -->
+    <section class="section has-background-light">
+      <div class="container content has-text-centered">
+        <h2 class="">申し込み・問い合わせ</h2>
+        <p>申し込み部分など、「このページでユーザーにやってもらいたい」部分は背景を変えることで、ユーザーの目にとめてもらう。デザインをする。</p>
+        <div class="buttons is-centered">
+          <button class="button is-large is-primary">
+            <span class="icon">
+              <i class="fas fa-mobile-alt"></i>
+            </span>
+            <span>00-0000-0000</span>
+          </button>
+          <button class="button is-large is-primary">
+            <span class="icon">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <span>xxxxxx@company.co.jp</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer has-background-dark">
+      <div class="content has-text-centered has-text-white">
+        <p>Copyright xxxxx</p>
+      </div>
+    </footer>
+
+    <script type="module" src="js/index.js"></script>
+  </body>
+</html>
