@@ -8,7 +8,7 @@ const base = {
     searchSubmit: this.search.searchSubmit,
     result: document.querySelector('.result'),
   },
-  searchUrlBase: 'https://www.googleapis.com/customsearch/v1?key=[key]cx=[cx]&pws=0&tbm=nws',
+  searchUrlBase: 'https://www.googleapis.com/customsearch/v1?key=[key]&cx=[cx]&pws=0&tbm=nws',
 };
 
 
