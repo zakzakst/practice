@@ -29,13 +29,13 @@ export class GameCore {
     const winW = this.getWinW();
     const winH = this.getWinH();
     let resW, resH;
-		if (w / h >= winW / winH) {
-			resW = winW;
-			resH = (h * winW / w) | 0;
-		} else {
-			resW = (w * winH / h) | 0;
-			resH = winH;
-		}
-		return {w: resW, h: resH};
+    if (w / h >= winW / winH) {
+      resW = winW;
+      resH = (h * winW / w) | 0;
+    } else {
+      resW = (w * winH / h) | 0;
+      resH = winH;
+    }
+    return {w: resW, h: resH};
   }
 };
