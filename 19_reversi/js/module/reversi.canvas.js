@@ -85,11 +85,80 @@ export class ReversiCanvas {
   }
 
   /**
+   * 盤面XYを座標XYに変換
+   */
+  xyToReal(x, y) {
+    const rX = this.l.brdX + this._sqSz * x;
+    const rY = this.l.brdY + this._sqSz * y;
+    return {
+      x: rX,
+      y: rY,
+    };
+  }
+
+  /**
    * 背景描画
    */
   drwBg(img) {
     // this._cntx.fillStyle = this._cntx.createPattern(this._imgs.bg, 'repeat');
     this._cntx.fillStyle = this._cntx.createPattern(img, 'repeat');
     this._cntx.fillRect(0, 0, this.c.w, this.c.h);
+  }
+
+  /**
+   * 1マス描画
+   */
+  drwSq(x, y) {
+    const r = this.xyToReal(x, y);
+    // マージン アウト、イン
+    let mO = 1;
+    let mI = 2;
+    if (this._sqSz >= 60) {
+      mO = 2;
+    }
+
+    this._cntx.fillStyle = '#000';
+    this._cntx.fillRect(r.x, r.y, this._sqSz, this._sqSz);
+
+    this._cntx.fillStyle = '#ffb900';
+    this._gcnvs.fllMrgnRct(this._cntx, r.x, r.y, this._sqSz, this._sqSz, mO);
+
+    this._cntx.fillStyle = '#fff05b';
+    this._gcnvs.fllMrgnRct(this._cntx, r.x, r.y, this._sqSz - mI, this._sqSz - mI, mO);
+
+    this._cntx.fillStyle = '#086319';
+    const rct = this._gcnvs.fllMrgnRct(this._cntx, r.x, r.y, this._sqSz, this._sqSz, mO + mI);
+    const w = rct.w;
+    const h = rct.h;
+
+    this._cntx.save();
+    this._cntx.globalAlpha = 0.1;
+    this._cntx.fillStyle = '#0eb32d';
+
+    this._cntx.save();
+    this._cntx.translate(rct.x, rct.y);
+    this._gcnvs.fllPth(this._cntx, w * 0.4, 0, w * 0.1, h, w * 0.6, h, w * 0.9, 0);
+    this._cntx.restore();
+
+    this._cntx.save();
+    this._cntx.translate(rct.x, rct.y);
+    this._gcnvs.fllPth(this._cntx, 0, h * 0.1, w, h * 0.4, w, h * 0.9, 0, h * 0.6);
+    this._cntx.restore();
+
+    // this._cntx.restore();
+  }
+
+  /**
+   * 盤面全描画
+   */
+  drwSqAll() {
+    const l = this.l;
+    // マス周辺の描画
+    this._cntx.fillStyle = '#000';
+    this._gcnvs.fllMrgnRct(this._cntx, l.brdX, l.brdY, l.brdW, l.brdH, -2);
+    // マスの描画
+    this._rvs.scnBrd((i, x, y) => {
+      this.drwSq(x, y);
+    });
   }
 }

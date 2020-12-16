@@ -38,7 +38,7 @@ const reversi = {
 
 
 //====================
-// 301 bg
+// 302 board
 (() => {
   // リソース（画像）の読み込み
   const r = [];
@@ -48,8 +48,24 @@ const reversi = {
     reversi.canvas.initCnvs();
     // reversi.canvas.drwBg();
     reversi.canvas.drwBg(resource.image.imgs.bg);
-  });
+    reversi.canvas.drwSqAll();
+  })
 })();
+
+
+//====================
+// 301 bg
+// (() => {
+//   // リソース（画像）の読み込み
+//   const r = [];
+//   r.push(resource.image.load('bg', 'img/bg.png'));
+//   // 読み込み待機
+//   $.when.apply($, r).then(() => {
+//     reversi.canvas.initCnvs();
+//     // reversi.canvas.drwBg();
+//     reversi.canvas.drwBg(resource.image.imgs.bg);
+//   });
+// })();
 
 
 //====================
