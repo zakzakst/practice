@@ -3,6 +3,7 @@
 import { GameCanvas } from "./module/game.canvas.js";
 import { GameCore } from "./module/game.core.js";
 import { GameAnim } from "./module/game.anim.js";
+import { GameUi } from "./module/game.ui.js";
 
 import { ResourceImage } from "./module/resource.image.js";
 import { ResourceFont } from "./module/resource.font.js";
@@ -12,6 +13,7 @@ const game = {
   core: new GameCore(),
   canvas: new GameCanvas(),
   anim: new GameAnim(),
+  ui: new GameUi(),
 };
 
 const resource = {
@@ -28,48 +30,75 @@ const resource = {
 
 
 //====================
-// 205 anim
+// 206 ui
 (() => {
   // 縦横比固定でキャンバス作成
   const sz = game.core.getFitSz(10, 11);
-  const c = game.canvas.initCnvs('reversi', sz.w, sz.h);
+  const c = game.canvas.initCnvs('reversi', sz.w, sz.h, 1);
   // アニメ追加
-  game.anim.add('bg', (tm) => {
+  game.anim.add('bg', tm => {
     // 全面色塗り
     c.cntx.fillStyle = '#faa';
     c.cntx.fillRect(0, 0, c.w, c.h);
   });
-  game.anim.add('rct1', (tm) => {
-    // 矩形色塗り1
-    c.cntx.fillStyle = '#aaf';
-    c.cntx.fillRect(
-      tm.sum % c.w,
-      tm.sum % c.w,
-      c.w * 0.2,
-      c.h * 0.2
-    );
+  // UI初期化
+  game.ui.init(c);
+  // ボタン追加1
+  game.ui.addBtn('btn1', 'Button1', 10, 10, 200, 50, () => {
+    game.ui.rmvBtn('btn1');
   });
-  game.anim.add('rct2', (tm) => {
-    // 矩形色塗り2
-    c.cntx.fillStyle = '#afa';
-    c.cntx.fillRect(
-      tm.sum * 0.5 % c.w,
-      tm.sum * 0.5 % c.w,
-      c.w * 0.15,
-      c.h * 0.15
-    );
+  // ボタン追加2
+  game.ui.addBtn('btn2', 'Button2', 10, 60, 200, 50, () => {
+    game.ui.rmvBtn('btn1');
   });
   // アニメ開始
   game.anim.strt();
-  // アニメ削除
-  setTimeout(() => {
-    game.anim.rmv('rct2');
-  }, 1000);
-  // アニメ停止
-  setTimeout(() => {
-    game.anim.stp();
-  }, 2000);
 })();
+
+
+//====================
+// 205 anim
+// (() => {
+//   // 縦横比固定でキャンバス作成
+//   const sz = game.core.getFitSz(10, 11);
+//   const c = game.canvas.initCnvs('reversi', sz.w, sz.h);
+//   // アニメ追加
+//   game.anim.add('bg', (tm) => {
+//     // 全面色塗り
+//     c.cntx.fillStyle = '#faa';
+//     c.cntx.fillRect(0, 0, c.w, c.h);
+//   });
+//   game.anim.add('rct1', (tm) => {
+//     // 矩形色塗り1
+//     c.cntx.fillStyle = '#aaf';
+//     c.cntx.fillRect(
+//       tm.sum % c.w,
+//       tm.sum % c.w,
+//       c.w * 0.2,
+//       c.h * 0.2
+//     );
+//   });
+//   game.anim.add('rct2', (tm) => {
+//     // 矩形色塗り2
+//     c.cntx.fillStyle = '#afa';
+//     c.cntx.fillRect(
+//       tm.sum * 0.5 % c.w,
+//       tm.sum * 0.5 % c.w,
+//       c.w * 0.15,
+//       c.h * 0.15
+//     );
+//   });
+//   // アニメ開始
+//   game.anim.strt();
+//   // アニメ削除
+//   setTimeout(() => {
+//     game.anim.rmv('rct2');
+//   }, 1000);
+//   // アニメ停止
+//   setTimeout(() => {
+//     game.anim.stp();
+//   }, 2000);
+// })();
 
 
 //====================
