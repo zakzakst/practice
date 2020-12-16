@@ -38,4 +38,19 @@ export class GameCore {
     }
     return {w: resW, h: resH};
   }
+
+  /**
+   * 範囲内か判定
+   * @param cX クリックx位置
+   * @param cY クリックy位置
+   * @param x 範囲左上x位置
+   * @param y 範囲左上y位置
+   * @param w 範囲幅
+   * @param h 範囲高さ
+   */
+  inRng(cX, cY, x, y, w, h) {
+    if (cX < x || x + w <= cX) return false;
+    if (cY < y || y + h <= cY) return false;
+    return true;
+  }
 };
