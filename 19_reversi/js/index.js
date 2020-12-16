@@ -30,30 +30,59 @@ const resource = {
 
 
 //====================
-// 206 ui
+// 207 scale image
 (() => {
-  // 縦横比固定でキャンバス作成
-  const sz = game.core.getFitSz(10, 11);
-  const c = game.canvas.initCnvs('reversi', sz.w, sz.h, 1);
-  // アニメ追加
-  game.anim.add('bg', tm => {
+  // リソース（画像）の読み込み
+  const r = [];
+  r.push(resource.image.load('_tkn0', 'img/token0.png'));
+  // 読み込み待機
+  $.when.apply($, r).then(() => {
+    // 縦横比固定でキャンバス作成
+    const sz = game.core.getFitSz(10, 11);
+    const c = game.canvas.initCnvs('reversi', sz.w, sz.h);
     // 全面色塗り
-    c.cntx.fillStyle = '#faa';
+    c.cntx.fillStyle = '#aff';
     c.cntx.fillRect(0, 0, c.w, c.h);
+    // 変数の初期化
+    const imgTknSrc = resource.image.imgs._tkn0;
+    const srcW = imgTknSrc.width;
+    const srcH = imgTknSrc.height;
+    const dstW = srcW / 3 | 0;
+    const dstH = srcH / 3 | 0;
+    // 1/3サイズ描画
+    c.cntx.drawImage(imgTknSrc, 0, 0, srcW, srcH, 0, (c.h - dstH) / 2, dstW, dstH);
+    // 1/3サイズ生成 描画
+    const imgTknGen = game.canvas.getScaledImg(imgTknSrc, 0, 0, srcW, srcH, dstW, dstH);
+    c.cntx.drawImage(imgTknGen, dstW, (c.h - dstH) / 2);
   });
-  // UI初期化
-  game.ui.init(c);
-  // ボタン追加1
-  game.ui.addBtn('btn1', 'Button1', 10, 10, 200, 50, () => {
-    game.ui.rmvBtn('btn1');
-  });
-  // ボタン追加2
-  game.ui.addBtn('btn2', 'Button2', 10, 60, 200, 50, () => {
-    game.ui.rmvBtn('btn1');
-  });
-  // アニメ開始
-  game.anim.strt();
 })();
+
+
+//====================
+// 206 ui
+// (() => {
+//   // 縦横比固定でキャンバス作成
+//   const sz = game.core.getFitSz(10, 11);
+//   const c = game.canvas.initCnvs('reversi', sz.w, sz.h, 1);
+//   // アニメ追加
+//   game.anim.add('bg', tm => {
+//     // 全面色塗り
+//     c.cntx.fillStyle = '#faa';
+//     c.cntx.fillRect(0, 0, c.w, c.h);
+//   });
+//   // UI初期化
+//   game.ui.init(c);
+//   // ボタン追加1
+//   game.ui.addBtn('btn1', 'Button1', 10, 10, 200, 50, () => {
+//     game.ui.rmvBtn('btn1');
+//   });
+//   // ボタン追加2
+//   game.ui.addBtn('btn2', 'Button2', 10, 60, 200, 50, () => {
+//     game.ui.rmvBtn('btn1');
+//   });
+//   // アニメ開始
+//   game.anim.strt();
+// })();
 
 
 //====================
