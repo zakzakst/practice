@@ -10,7 +10,9 @@
 - テキスト
 
 ## 参考サイト
-- テキスト
+- https://coliss.com/articles/build-websites/operation/css/the-state-of-css-2020.html
+- https://coliss.com/articles/build-websites/operation/css/uncommon-css-properties.html
+- https://coliss.com/articles/build-websites/operation/css/css-new-pseudo-classes-is.html
 
 ## その他
 - テキスト

@@ -1,0 +1,119 @@
+/* 表示用 */
+.spacer {
+  height: 1000px;
+}
+
+/*
+■ sticky
+https://coliss.com/articles/build-websites/operation/css/css-position-sticky-how-it-really-works.html
+*/
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+/*
+■ aspect-ratio
+https://developer.mozilla.org/ja/docs/Web/CSS/@media/aspect-ratio
+*/
+@media (min-aspect-ratio: 8/5) {
+  .aspect-ratio {
+    background: #f00;
+  }
+}
+@media (max-aspect-ratio: 3/2) {
+  .aspect-ratio {
+    background: #0f0;
+  }
+}
+@media (aspect-ratio: 1/1) {
+  .aspect-ratio {
+    background: #00f;
+  }
+}
+
+/*
+■ content-visibility
+https://www.aiship.jp/knowhow/archives/32771
+*/
+.content-visibility {
+  content-visibility: auto;
+  /* 理由としては、ビューポート外でレンダリングされていない要素は中身が空の要素として振る舞い、ビューポート内に達するまでは高さが0pxとして扱われます。これによりスクロールバーが正しく表示されなくなってしまうため、「contain-intrinsic-size」プロパティで本来の要素の高さを指定する必要があります。 */
+  contain-intrinsic-size: 200px;
+}
+
+/*
+■ object-fit
+https://developer.mozilla.org/ja/docs/Web/CSS/object-fit
+*/
+.object-fit {
+  width: 300px;
+  height: 300px;
+}
+.object-fit > img {
+  width: 100%;
+  height: 100%;
+}
+.object-fit--fill {
+  object-fit: fill;
+}
+.object-fit--contain {
+  object-fit: contain;
+}
+.object-fit--cover {
+  object-fit: cover;
+}
+
+/*
+■ clip-path
+https://developer.mozilla.org/ja/docs/Web/CSS/clip-path
+https://www.webprofessional.jp/introducing-css-clip-path-property/
+*/
+.clip-path--inset {
+  clip-path: inset(100px 50px);
+}
+.clip-path--circle1 {
+  clip-path: circle(40%);
+}
+.clip-path--circle2 {
+  clip-path: circle(50px at 50px 100px);
+}
+.clip-path--ellipse {
+  clip-path: ellipse(100px 150px at 10% 20%);
+}
+.clip-path--polygon {
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+/*
+■ scroll-snap
+https://coliss.com/articles/build-websites/operation/css/how-to-use-css-scroll-snap.html
+https://qiita.com/hibikikudo/items/ee1b913479bceddb654c
+*/
+.scroll-snap {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+}
+.scroll-snap::-webkit-scrollbar {
+  width: 10px;
+}
+.scroll-snap::-webkit-scrollbar-track {
+border-radius: 10px;
+box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+}
+.scroll-snap::-webkit-scrollbar-thumb {
+background-color: rgba(0, 0, 50, .5);
+border-radius: 10px;
+box-shadow:0 0 0 1px rgba(255, 255, 255, .3);
+}
+.scroll-snap > div {
+  /* scroll-snap-align: start; */
+  scroll-snap-align: center;
+  flex-basis: auto; /* bulmaのcss打消し */
+  flex-grow: 0; /* bulmaのcss打消し */
+  flex-shrink: 0; /* bulmaのcss打消し */
+}
+.scroll-snap > div > div {
+  width: 300px;
+  height: 200px;
+}
