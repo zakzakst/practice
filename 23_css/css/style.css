@@ -117,3 +117,22 @@ box-shadow:0 0 0 1px rgba(255, 255, 255, .3);
   width: 300px;
   height: 200px;
 }
+
+/*
+■ marker
+*/
+.marker {
+  list-style-type: disc;
+}
+.marker > li::marker {
+  color: #f00;
+}
+
+/*
+■ column-rule
+*/
+.column-rule {
+  columns: 3;
+  column-rule: solid 1px #f00;
+  column-gap: 32px;
+}
