@@ -13,6 +13,7 @@
 - https://developer.mozilla.org/ja/docs/Web/API/Web_Speech_API
 - https://amg-solution.jp/blog/9330
 - https://qiita.com/kolife/items/a0af7702eef05994fbfb
+- https://qiita.com/hmmrjn/items/be29c62ba4e4a02d305c
 
 ## その他
 - テキスト
