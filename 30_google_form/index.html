@@ -8,7 +8,62 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <!-- 通常の組み込み -->
+    <!-- <iframe src="https://docs.google.com/forms/d/e/[Google FormのID]/viewform?embedded=true" width="640" height="544" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe> -->
 
-    <script src="js/index.js"></script>
+    <!-- フォームの見た目カスタマイズ（遷移先はGoogle Form） -->
+    <!-- <div class="container">
+      <form action="https://docs.google.com/forms/u/0/d/e/[Google FormのID]/formResponse">
+        <div class="field">
+          <label class="label">Name</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Text input" name="entry.2039833141">
+          </div>
+        </div>
+        <div class="field">
+          <label class="radio">
+            <input type="radio" name="entry.609974871">
+            No
+          </label>
+        </div>
+        <div class="field">
+          <label class="radio">
+            <input type="radio" name="entry.1158628209">
+            No
+          </label>
+        </div>
+      </form>
+    </div> -->
+
+    <!-- フォームの見た目カスタマイズ（ページ遷移させない） -->
+    <div class="container">
+      <form id="js-form" target="send-target">
+        <div class="field">
+          <label class="label">Name</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Text input" name="entry.2039833141">
+          </div>
+        </div>
+        <div class="field">
+          <label class="radio">
+            <input type="radio" name="entry.609974871" value="test1">test1
+          </label>
+          <label class="radio">
+            <input type="radio" name="entry.609974871" value="test2">test2
+          </label>
+        </div>
+        <div class="field">
+          <label class="radio">
+            <input type="radio" name="entry.1158628209" value="test3">test3
+          </label>
+          <label class="radio">
+            <input type="radio" name="entry.1158628209" value="test4">test4
+          </label>
+        </div>
+      </form>
+      <div class="thanks" id="js-thanks">完了</div>
+    </div>
+
+    <script src="js/sample.js"></script>
   </body>
 </html>
