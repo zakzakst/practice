@@ -13,8 +13,6 @@
 - https://www.wp-benricho.com/lightgallery-js/
 - https://sachinchoolur.github.io/lightgallery.js/
 - https://www.npmjs.com/package/lightgallery.js
-- https://photoswipe.com/
-- https://www.npmjs.com/package/photoswipe
 
 ## その他
 - テキスト
