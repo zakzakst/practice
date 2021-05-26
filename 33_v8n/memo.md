@@ -12,6 +12,9 @@
 ## 参考サイト
 - https://coliss.com/articles/build-websites/operation/javascript/js-validation-library-v8n.html
 - https://blog.universe-web.jp/6807/
+- https://imbrn.github.io/v8n/
+- https://co.bsnws.net/article/182
 
 ## その他
-- テキスト
+- try catch の時はcheckを使う？
+https://imbrn.github.io/v8n/Validation.html#exception-based-validation
